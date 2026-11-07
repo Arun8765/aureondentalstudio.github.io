@@ -20,7 +20,6 @@
             --dark: #0f141d;
             --light: #faf8f5;
             --gray: #667085;
-            --light-gray: #f2f4f7;
             --shadow: 0 10px 30px rgba(0,0,0,0.08);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -42,11 +41,10 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3, h4, .brand-font {
+        h1, h2, h3, h4 {
             font-family: 'Cinzel', serif;
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -72,7 +70,7 @@
         }
 
         .logo-img {
-            height: 55px;
+            height: 60px;
             object-fit: contain;
         }
 
@@ -136,8 +134,8 @@
 
         /* Hero Section */
         .hero {
-            padding: 90px 0 60px;
-            background: radial-gradient(circle at top right, rgba(197, 160, 89, 0.1) 0%, transparent 60%);
+            padding: 80px 0 60px;
+            background: radial-gradient(circle at top right, rgba(197, 160, 89, 0.12) 0%, transparent 60%);
         }
 
         .hero-grid {
@@ -224,9 +222,103 @@
             margin-bottom: 6px;
         }
 
+        /* Doctor Profiles Section */
+        .doctors-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .doctor-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            transition: var(--transition);
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .doctor-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 20px;
+            border: 2px solid var(--primary);
+        }
+
+        .doctor-card h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .doctor-card .title {
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .doctor-contact-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .doctor-card .doc-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 30px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .doc-btn-call {
+            background: var(--secondary);
+            color: #fff;
+        }
+
+        .doc-btn-call:hover {
+            background: var(--primary-dark);
+        }
+
+        .doc-btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+        }
+
+        .doc-btn-whatsapp:hover {
+            background: #1ebd56;
+        }
+
         /* Services Section */
         .services {
             padding: 90px 0;
+            background: #fff;
         }
 
         .section-header {
@@ -252,11 +344,11 @@
         }
 
         .service-card {
-            background: #fff;
+            background: var(--light);
             padding: 32px 24px;
             border-radius: 16px;
-            box-shadow: var(--shadow);
-            border: 1px solid #f0f0f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid #eee;
             transition: var(--transition);
             text-align: center;
         }
@@ -264,6 +356,8 @@
         .service-card:hover {
             transform: translateY(-6px);
             border-color: var(--primary);
+            background: #fff;
+            box-shadow: var(--shadow);
         }
 
         .service-icon {
@@ -292,7 +386,7 @@
 
         /* Poster Banner Section */
         .poster-section {
-            padding: 60px 0;
+            padding: 80px 0;
             background: var(--secondary);
             color: #fff;
         }
@@ -306,7 +400,7 @@
 
         .poster-img {
             width: 100%;
-            max-width: 480px;
+            max-width: 460px;
             border-radius: 16px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.5);
             border: 2px solid var(--primary);
@@ -325,21 +419,10 @@
             margin-bottom: 24px;
         }
 
-        .doctors-list {
-            margin-top: 24px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .doctors-list h4 {
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
         /* Gallery Section */
         .gallery {
             padding: 90px 0;
-            background: #fff;
+            background: var(--light);
         }
 
         .gallery-grid {
@@ -373,41 +456,51 @@
             left: 0;
             right: 0;
             padding: 16px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
             color: #fff;
             font-weight: 500;
             font-size: 0.95rem;
         }
 
-        /* Booking / Contact Section */
+        /* Contact Section */
         .contact {
             padding: 90px 0;
-            background: var(--light);
+            background: #fff;
         }
 
-        .contact-grid {
+        .contact-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--light);
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+        }
+
+        .contact-grid-inner {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 48px;
-        }
-
-        .contact-info {
-            background: #fff;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
+            gap: 32px;
+            margin-top: 32px;
+            align-items: center;
         }
 
         .info-item {
             display: flex;
-            gap: 20px;
+            gap: 16px;
+            align-items: flex-start;
             margin-bottom: 24px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
         }
 
         .info-item i {
             width: 44px;
             height: 44px;
-            border-radius: 10px;
+            border-radius: 12px;
             background: var(--primary-light);
             color: var(--primary-dark);
             display: flex;
@@ -418,7 +511,7 @@
         }
 
         .info-item h4 {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--secondary);
             margin-bottom: 4px;
         }
@@ -428,40 +521,52 @@
             font-size: 0.95rem;
         }
 
-        .booking-form {
+        /* Maps & QR Card */
+        .maps-card {
             background: #fff;
-            padding: 40px;
+            padding: 24px;
             border-radius: 20px;
-            box-shadow: var(--shadow);
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid rgba(197, 160, 89, 0.2);
         }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            color: var(--secondary);
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid #d0d5dd;
+        .maps-qr-img {
+            width: 160px;
+            height: 160px;
+            object-fit: contain;
+            margin: 16px auto;
             border-radius: 10px;
-            font-family: inherit;
-            font-size: 0.95rem;
-            outline: none;
-            transition: var(--transition);
+            border: 1px solid #eee;
+            display: block;
         }
 
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.15);
+        /* Doctor Appointment Callout Box */
+        .appointment-callout {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .appointment-callout h4 {
+            color: var(--secondary);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .appointment-callout p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .callout-doc-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
         }
 
         /* Footer */
@@ -479,7 +584,7 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hero-grid, .poster-grid, .contact-grid {
+            .hero-grid, .poster-grid, .doctors-grid, .contact-grid-inner {
                 grid-template-columns: 1fr;
             }
 
@@ -489,6 +594,10 @@
 
             .hero h1 {
                 font-size: 2.2rem;
+            }
+
+            .contact-box {
+                padding: 28px;
             }
 
             nav ul {
@@ -506,12 +615,13 @@
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#doctors">Surgeons</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#gallery">Clinic Tour</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Contact & Location</a></li>
                 </ul>
             </nav>
-            <a href="#book" class="btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+            <a href="#doctors" class="btn-primary"><i class="fa-solid fa-phone"></i> Contact Doctors</a>
         </div>
     </header>
 
@@ -521,10 +631,10 @@
             <div class="hero-text">
                 <span class="hero-subtitle">Premium Dental Care in Sahakar Nagar</span>
                 <h1>Wear Your Smile Like a Crown</h1>
-                <p>Welcome to <strong>Aureon Dental Studio</strong>. We combine modern dentistry techniques with patient-centered care to deliver world-class oral healthcare in a comfortable, relaxing environment.</p>
+                <p>Welcome to <strong>Aureon Dental Studio</strong>. We combine state-of-the-art dental technology with personalized patient care to ensure every treatment is painless and effective.</p>
                 <div class="hero-buttons">
-                    <a href="#book" class="btn-primary"><i class="fa-solid fa-tooth"></i> Book Your Visit</a>
-                    <a href="tel:8073382302" class="btn-secondary"><i class="fa-solid fa-phone"></i> 8073382302</a>
+                    <a href="#doctors" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Book via Doctor Contact</a>
+                    <a href="https://maps.app.goo.gl/LRijvbT5sAHReLJx5" target="_blank" class="btn-secondary"><i class="fa-solid fa-location-dot"></i> Get Directions</a>
                 </div>
             </div>
             <div class="hero-image-wrapper">
@@ -539,53 +649,98 @@
             <div class="highlight-card">
                 <i class="fa-solid fa-heart-pulse"></i>
                 <h4>Patient-Centred Care</h4>
-                <p>Gentle procedures tailored to your comfort and peace of mind.</p>
+                <p>Gentle procedures tailored to your comfort and individual needs.</p>
             </div>
             <div class="highlight-card">
                 <i class="fa-solid fa-microscope"></i>
                 <h4>Modern Dentistry</h4>
-                <p>Equipped with state-of-the-art dental chairs and diagnostic tools.</p>
+                <p>Equipped with advanced dental chairs and diagnostic technology.</p>
             </div>
             <div class="highlight-card">
                 <i class="fa-solid fa-shield-halved"></i>
-                <h4>Preventive Care</h4>
-                <p>Comprehensive oral screening and long-term care plans.</p>
+                <h4>Preventive & Routine Care</h4>
+                <p>Comprehensive oral screening and long-term dental protection.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Offered -->
+    <!-- Lead Surgeons & Direct Booking Section -->
+    <section class="doctors-section" id="doctors">
+        <div class="container">
+            <div class="section-header">
+                <h2>Request an Appointment</h2>
+                <p>Call or WhatsApp our dental surgeons directly to schedule your appointment.</p>
+            </div>
+            <div class="doctors-grid">
+                <!-- Dr. Aravind S -->
+                <div class="doctor-card">
+                    <div class="doctor-avatar">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3>Dr. Aravind S</h3>
+                    <p class="title">Dental Surgeon</p>
+                    <div class="doctor-contact-btns">
+                        <a href="tel:9535508672" class="doc-btn doc-btn-call">
+                            <i class="fa-solid fa-phone"></i> Call +91 9535508672
+                        </a>
+                        <a href="https://wa.me/919535508672?text=Hello%20Dr.%20Aravind,%20I%20would%20like%20to%20book%20an%20appointment%20at%20Aureon%20Dental%20Studio." target="_blank" class="doc-btn doc-btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Dr. Aravind
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dr. Ajay Kennedy -->
+                <div class="doctor-card">
+                    <div class="doctor-avatar">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3>Dr. Ajay Kennedy</h3>
+                    <p class="title">Dental Surgeon</p>
+                    <div class="doctor-contact-btns">
+                        <a href="tel:8073382302" class="doc-btn doc-btn-call">
+                            <i class="fa-solid fa-phone"></i> Call +91 8073382302
+                        </a>
+                        <a href="https://wa.me/918073382302?text=Hello%20Dr.%20Ajay,%20I%20would%20like%20to%20book%20an%20appointment%20at%20Aureon%20Dental%20Studio." target="_blank" class="doc-btn doc-btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Dr. Ajay
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
                 <h2>Our Dental Services</h2>
-                <p>Comprehensive dental treatments tailored for every member of your family.</p>
+                <p>Full-spectrum dental treatments for all your oral health needs.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <h3>Veneers & Smile Design</h3>
-                    <p>Transform your smile with custom aesthetic cosmetic porcelain veneers.</p>
+                    <p>Custom cosmetic veneers to enhance and refine your natural smile.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-child"></i></div>
                     <h3>Pediatric Dentistry</h3>
-                    <p>Friendly, gentle dental care designed specially for infants and children.</p>
+                    <p>Gentle and friendly dental care designed specifically for kids.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-teeth-open"></i></div>
                     <h3>Braces & Aligners</h3>
-                    <p>Straighten teeth comfortably with clear aligners and modern braces.</p>
+                    <p>Straighten teeth with clear aligners or traditional orthodontic braces.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
                     <h3>Dental Implants</h3>
-                    <p>Permanent, natural-looking replacement for missing teeth.</p>
+                    <p>Permanent, durable, natural-looking replacement for missing teeth.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-vial-virus"></i></div>
                     <h3>Root Canal Treatment</h3>
-                    <p>Pain-free root canal therapy to save damaged or infected teeth.</p>
+                    <p>Advanced root canal therapy to save damaged teeth painlessly.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-teeth"></i></div>
@@ -595,54 +750,47 @@
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
                     <h3>Gum Treatments</h3>
-                    <p>Advanced treatment for bleeding gums and periodontitis.</p>
+                    <p>Specialized periodontic care for healthy gums and firm teeth support.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
                     <h3>Laser Dentistry</h3>
-                    <p>Precision tissue treatment using modern dental laser technology.</p>
+                    <p>High-precision tissue treatments using modern dental lasers.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-sparkles"></i></div>
                     <h3>Cosmetic Dentistry</h3>
-                    <p>Teeth whitening and cosmetic enhancements for a radiant smile.</p>
+                    <p>Teeth whitening and aesthetic enhancements for a sparkling smile.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-person-dots-from-line"></i></div>
                     <h3>Dentures</h3>
-                    <p>Complete and partial high-quality custom fitted dentures.</p>
+                    <p>Custom-fitted full and partial dentures for optimal function and comfort.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
                     <h3>Oral Cancer Screening</h3>
-                    <p>Thorough preventive clinical exams for early detection.</p>
+                    <p>Thorough preventive clinical exams for early detection and safety.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="service-icon"><i class="fa-solid fa-hospital-user"></i></div>
                     <h3>Minor Oral Surgeries</h3>
-                    <p>Expert surgical management for complex dental conditions.</p>
+                    <p>Expert surgical solutions for wisdom teeth and complex dental conditions.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Poster Banner & Doctors -->
+    <!-- Poster Banner -->
     <section class="poster-section">
         <div class="container poster-grid">
             <div>
                 <img src="clinic_poster.jpeg" alt="Aureon Dental Studio Poster" class="poster-img">
             </div>
             <div class="poster-text">
-                <h2>Excellence in Dental Care</h2>
-                <p>Our clinic is fully equipped with high-tech infrastructure to ensure complete hygiene, painless procedures, and lasting outcomes.</p>
-                
-                <div class="doctors-list">
-                    <h4>Lead Dental Surgeons:</h4>
-                    <p><strong>Dr. Aravind S</strong> (Dental Surgeon)</p>
-                    <p><strong>Dr. Ajay Kennedy</strong> (Dental Surgeon)</p>
-                </div>
-                <br>
-                <a href="#book" class="btn-primary" style="background:#fff; color:var(--dark);"><i class="fa-solid fa-calendar-day"></i> Schedule an Appointment</a>
+                <h2>Comprehensive Dental Care</h2>
+                <p>Equipped with modern dental operatory chairs, digital imaging, and strict sterilization protocols for your safety.</p>
+                <a href="#doctors" class="btn-primary" style="background:#fff; color:var(--dark);"><i class="fa-solid fa-phone"></i> Contact Doctors to Book</a>
             </div>
         </div>
     </section>
@@ -652,20 +800,20 @@
         <div class="container">
             <div class="section-header">
                 <h2>Inside Aureon Dental Studio</h2>
-                <p>Take a virtual tour of our modern, hygienic, and relaxing clinic facility.</p>
+                <p>Take a look around our clean, modern, and welcoming clinic facility.</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="interior1.jpeg" alt="Reception Desk & Waiting Lounge">
-                    <div class="gallery-caption">Reception & Comfortable Waiting Lounge</div>
+                    <img src="interior1.jpeg" alt="Reception Lounge">
+                    <div class="gallery-caption">Reception & Waiting Lounge</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="interior2.jpeg" alt="Modern Dental Chair & Equipment">
-                    <div class="gallery-caption">State-of-the-art Dental Operatory</div>
+                    <img src="interior2.jpeg" alt="Dental Operatory Chair">
+                    <div class="gallery-caption">Modern Dental Operatory</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="interior3.jpeg" alt="Advanced Treatment Suite">
-                    <div class="gallery-caption">Advanced Clinical Treatment Suite</div>
+                    <img src="interior3.jpeg" alt="Advanced Clinical Suite">
+                    <div class="gallery-caption">Advanced Treatment Suite</div>
                 </div>
                 <div class="gallery-item">
                     <img src="exterior_day.jpeg" alt="Clinic Exterior Day View">
@@ -673,81 +821,67 @@
                 </div>
                 <div class="gallery-item">
                     <img src="exterior_night.jpeg" alt="Clinic Exterior Night View">
-                    <div class="gallery-caption">Clinic Exterior (Illuminated Night View)</div>
+                    <div class="gallery-caption">Clinic Exterior (Night View)</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Appointment Section -->
+    <!-- Contact Details & Google Maps QR Section -->
     <section class="contact" id="contact">
-        <div class="container contact-grid">
-            <!-- Contact Details -->
-            <div class="contact-info">
-                <h3>Visit & Contact Us</h3>
-                <br>
-                <div class="info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Clinic Address</h4>
-                        <p>NO-1054/5, 2nd Floor, 24th Cross, 23rd Main,<br>MCECHS Layout, Ward No. 7, Railway Parallel Road,<br>Sahakar Nagar, Bengaluru – 560092</p>
-                    </div>
+        <div class="container">
+            <div class="contact-box">
+                <div class="section-header" style="margin-bottom: 30px;">
+                    <h2>Clinic Location & Details</h2>
+                    <p>Reach out to book an appointment or visit us in Sahakar Nagar.</p>
                 </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <h4>Phone / WhatsApp</h4>
-                        <p>+91 8073382302 | +91 9535508672</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-clock"></i>
-                    <div>
-                        <h4>Clinic Timings</h4>
-                        <p><strong>Monday – Saturday:</strong> 10:00 AM – 9:00 PM<br><strong>Sunday:</strong> By Appointment</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <h4>Email & Social</h4>
-                        <p>aureondentalstudio@gmail.com<br>Instagram: @aureon_dental_studio</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Booking Form -->
-            <div class="booking-form" id="book">
-                <h3>Request an Appointment</h3>
-                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 20px;">Fill out the form below and our team will get back to confirm your appointment slot.</p>
-                <form action="https://formspree.io/f/aureondentalstudio@gmail.com" method="POST">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" name="name" placeholder="John Doe" required>
+                <div class="appointment-callout">
+                    <h4><i class="fa-solid fa-calendar-check" style="color: var(--primary);"></i> How to Book an Appointment</h4>
+                    <p>To request an appointment slot, please call or send a WhatsApp message directly to our surgeons:</p>
+                    <div class="callout-doc-links">
+                        <a href="tel:9535508672" class="btn-secondary" style="padding: 8px 18px; font-size: 0.88rem;"><i class="fa-solid fa-phone"></i> Dr. Aravind S (9535508672)</a>
+                        <a href="tel:8073382302" class="btn-secondary" style="padding: 8px 18px; font-size: 0.88rem;"><i class="fa-solid fa-phone"></i> Dr. Ajay Kennedy (8073382302)</a>
                     </div>
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="tel" name="phone" placeholder="9876543210" required>
+                </div>
+
+                <div class="contact-grid-inner">
+                    <div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Clinic Address</h4>
+                                <p>NO-1054/5, 2nd Floor, 24th Cross, 23rd Main,<br>MCECHS Layout, Ward No. 7, Railway Parallel Road,<br>Sahakar Nagar, Bengaluru – 560092</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <h4>Clinic Timings</h4>
+                                <p><strong>Monday – Saturday:</strong> 10:00 AM – 9:00 PM<br><strong>Sunday:</strong> By Appointment</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email & Social</h4>
+                                <p>aureondentalstudio@gmail.com<br>Instagram: @aureon_dental_studio</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Preferred Date</label>
-                        <input type="date" name="date" required>
+
+                    <!-- Google Maps QR Card -->
+                    <div class="maps-card">
+                        <h4 style="color: var(--secondary); margin-bottom: 6px;"><i class="fa-solid fa-map-location-dot" style="color: var(--primary);"></i> Find Us on Google Maps</h4>
+                        <p style="font-size: 0.85rem; color: var(--gray);">Scan QR code with your phone camera or click below</p>
+                        <img src="maps_qr.jpeg" alt="Google Maps QR Code" class="maps-qr-img">
+                        <a href="https://maps.app.goo.gl/LRijvbT5sAHReLJx5" target="_blank" class="btn-primary" style="padding: 8px 18px; font-size: 0.85rem; justify-content: center; width: 100%;">
+                            <i class="fa-solid fa-location-arrow"></i> Open Google Maps
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <label>Required Service</label>
-                        <select name="service">
-                            <option>General Consultation</option>
-                            <option>Veneers & Smile Design</option>
-                            <option>Braces & Aligners</option>
-                            <option>Dental Implants</option>
-                            <option>Root Canal Treatment</option>
-                            <option>Pediatric Dentistry</option>
-                            <option>Teeth Whitening / Cleaning</option>
-                            <option>Other Services</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;"><i class="fa-paper-plane"></i> Submit Request</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
