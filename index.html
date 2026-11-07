@@ -198,8 +198,8 @@
 
         .highlights-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
             text-align: center;
         }
 
@@ -217,7 +217,7 @@
         }
 
         .highlight-card h4 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--secondary);
             margin-bottom: 6px;
         }
@@ -339,7 +339,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
 
@@ -581,7 +581,7 @@
             }
 
             .highlights-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
 
             .hero h1 {
@@ -621,9 +621,9 @@
     <section class="hero" id="about">
         <div class="container hero-grid">
             <div class="hero-text">
-                <span class="hero-subtitle">Premium Dental Care in Sahakar Nagar</span>
-                <h1>Wear Your Smile Like a Crown</h1>
-                <p>Welcome to <strong>Aureon Dental Studio</strong>. We combine state-of-the-art dental technology with personalized patient care to ensure every treatment is painless and effective.</p>
+                <span class="hero-subtitle">Complete Dental Care for Every Stage of Life</span>
+                <h1>Healthy Smiles for Brighter Tomorrows</h1>
+                <p>Welcome to <strong>Aureon Dental Studio</strong>. We combine advanced dental technology with family-friendly, comfortable care to ensure every treatment is painless and personalized.</p>
                 <div class="hero-buttons">
                     <a href="#doctors" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Book via Doctor Contact</a>
                     <a href="https://maps.app.goo.gl/LRijvbT5sAHReLJx5" target="_blank" class="btn-secondary"><i class="fa-solid fa-location-dot"></i> Get Directions</a>
@@ -635,53 +635,41 @@
         </div>
     </section>
 
-    <!-- Key Highlights -->
+    <!-- Key Highlights from Poster 2 -->
     <section class="highlights">
         <div class="container highlights-grid">
             <div class="highlight-card">
-                <i class="fa-solid fa-heart-pulse"></i>
-                <h4>Patient-Centred Care</h4>
-                <p>Gentle procedures tailored to your comfort and individual needs.</p>
-            </div>
-            <div class="highlight-card">
                 <i class="fa-solid fa-microscope"></i>
-                <h4>Modern Dentistry</h4>
-                <p>Equipped with advanced dental chairs and diagnostic technology.</p>
+                <h4>Advanced Technology</h4>
+                <p>Equipped with state-of-the-art dental equipment.</p>
             </div>
             <div class="highlight-card">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h4>Preventive & Routine Care</h4>
-                <p>Comprehensive oral screening and long-term dental protection.</p>
+                <i class="fa-solid fa-users"></i>
+                <h4>Family Friendly Care</h4>
+                <p>Comfortable dental solutions for all age groups.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-face-smile"></i>
+                <h4>Comfortable Experience</h4>
+                <p>Gentle and relaxing clinical environment.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <h4>Personalised Plans</h4>
+                <p>Custom treatment plans suited to your specific dental needs.</p>
             </div>
         </div>
     </section>
 
-    <!-- Lead Surgeons & Direct Booking Section -->
+    <!-- Lead Surgeons Section (Timings & Order updated as per Poster 2) -->
     <section class="doctors-section" id="doctors">
         <div class="container">
             <div class="section-header">
-                <h2>Request an Appointment</h2>
+                <h2>Our Lead Dental Surgeons</h2>
                 <p>Call or WhatsApp our dental surgeons directly to schedule your appointment.</p>
             </div>
             <div class="doctors-grid">
-                <!-- Dr. Aravind S -->
-                <div class="doctor-card">
-                    <div class="doctor-avatar">
-                        <i class="fa-solid fa-user-doctor"></i>
-                    </div>
-                    <h3>Dr. Aravind S</h3>
-                    <p class="title">Dental Surgeon</p>
-                    <div class="doctor-contact-btns">
-                        <a href="tel:9535508672" class="doc-btn doc-btn-call">
-                            <i class="fa-solid fa-phone"></i> Call +91 9535508672
-                        </a>
-                        <a href="https://wa.me/919535508672?text=Hello%20Dr.%20Aravind,%20I%20would%20like%20to%20book%20an%20appointment%20at%20Aureon%20Dental%20Studio." target="_blank" class="doc-btn doc-btn-whatsapp">
-                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Dr. Aravind
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Dr. Ajay Kennedy -->
+                <!-- Dr. Ajay Kennedy (First on poster 2) -->
                 <div class="doctor-card">
                     <div class="doctor-avatar">
                         <i class="fa-solid fa-user-doctor"></i>
@@ -697,91 +685,83 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Dr. Aravind S (Second on poster 2) -->
+                <div class="doctor-card">
+                    <div class="doctor-avatar">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3>Dr. Aravind S</h3>
+                    <p class="title">Dental Surgeon</p>
+                    <div class="doctor-contact-btns">
+                        <a href="tel:9535508672" class="doc-btn doc-btn-call">
+                            <i class="fa-solid fa-phone"></i> Call +91 9535508672
+                        </a>
+                        <a href="https://wa.me/919535508672?text=Hello%20Dr.%20Aravind,%20I%20would%20like%20to%20book%20an%20appointment%20at%20Aureon%20Dental%20Studio." target="_blank" class="doc-btn doc-btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Dr. Aravind
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section (Updated to match clinic_poster_2.jpg exactly) -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2>Our Dental Services</h2>
-                <p>Full-spectrum dental treatments for all your oral health needs.</p>
+                <h2>Our Services</h2>
+                <p>Complete dental care tailored for every stage of life.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3>Veneers & Smile Design</h3>
-                    <p>Custom cosmetic veneers to enhance and refine your natural smile.</p>
+                    <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <h3>General Dentistry</h3>
+                    <p>Comprehensive dental check-ups and preventative routine oral health care.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-child"></i></div>
                     <h3>Pediatric Dentistry</h3>
-                    <p>Gentle and friendly dental care designed specifically for kids.</p>
+                    <p>Friendly, gentle dental care designed specially for infants and children.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-teeth-open"></i></div>
-                    <h3>Braces & Aligners</h3>
-                    <p>Straighten teeth with clear aligners or traditional orthodontic braces.</p>
+                    <h3>Braces and Aligners</h3>
+                    <p>Straighten teeth comfortably with clear aligners and orthodontic solutions.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
                     <h3>Dental Implants</h3>
-                    <p>Permanent, durable, natural-looking replacement for missing teeth.</p>
+                    <p>Permanent, natural-looking replacement for missing teeth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Veneers</h3>
+                    <p>Transform your smile with custom aesthetic cosmetic porcelain veneers.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-vial-virus"></i></div>
                     <h3>Root Canal Treatment</h3>
-                    <p>Advanced root canal therapy to save damaged teeth painlessly.</p>
+                    <p>Pain-free root canal therapy to save damaged or infected teeth.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-teeth"></i></div>
                     <h3>Tooth Extractions</h3>
                     <p>Safe and minimal-discomfort surgical and general extractions.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
-                    <h3>Gum Treatments</h3>
-                    <p>Specialized periodontic care for healthy gums and firm teeth support.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Laser Dentistry</h3>
-                    <p>High-precision tissue treatments using modern dental lasers.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-sparkles"></i></div>
-                    <h3>Cosmetic Dentistry</h3>
-                    <p>Teeth whitening and aesthetic enhancements for a sparkling smile.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-person-dots-from-line"></i></div>
-                    <h3>Dentures</h3>
-                    <p>Custom-fitted full and partial dentures for optimal function and comfort.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
-                    <h3>Oral Cancer Screening</h3>
-                    <p>Thorough preventive clinical exams for early detection and safety.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-hospital-user"></i></div>
-                    <h3>Minor Oral Surgeries</h3>
-                    <p>Expert surgical solutions for wisdom teeth and complex dental conditions.</p>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Poster Banner -->
+    <!-- Poster Banner (Using clinic_poster_2.jpg) -->
     <section class="poster-section">
         <div class="container poster-grid">
             <div>
-                <img src="clinic_poster.jpeg" alt="Aureon Dental Studio Poster" class="poster-img">
+                <img src="clinic_poster_2.jpg" alt="Aureon Dental Studio New Poster" class="poster-img">
             </div>
             <div class="poster-text">
-                <h2>Comprehensive Dental Care</h2>
-                <p>Equipped with modern dental operatory chairs, digital imaging, and strict sterilization protocols for your safety.</p>
+                <h2>Healthy Smiles for Brighter Tomorrows</h2>
+                <p>Complete dental care for every stage of life. Visit our advanced facility in Sahakar Nagar for personalized treatments.</p>
                 <a href="#doctors" class="btn-primary" style="background:#fff; color:var(--dark);"><i class="fa-solid fa-phone"></i> Contact Doctors to Book</a>
             </div>
         </div>
@@ -824,16 +804,16 @@
         <div class="container">
             <div class="contact-box">
                 <div class="section-header" style="margin-bottom: 30px;">
-                    <h2>Clinic Location & Details</h2>
-                    <p>Reach out to book an appointment or visit us in Sahakar Nagar.</p>
+                    <h2>Clinic Location & Timings</h2>
+                    <p>Visit us in Sahakar Nagar or reach out for appointments.</p>
                 </div>
 
                 <div class="appointment-callout">
-                    <h4><i class="fa-solid fa-calendar-check" style="color: var(--primary);"></i> How to Book an Appointment</h4>
-                    <p>To request an appointment slot, please call or send a WhatsApp message directly to our surgeons:</p>
-                    <div class="callout-doc-links">
-                        <a href="tel:9535508672" class="btn-secondary" style="padding: 8px 18px; font-size: 0.88rem;"><i class="fa-solid fa-phone"></i> Dr. Aravind S (9535508672)</a>
+                    <h4><i class="fa-solid fa-calendar-check" style="color: var(--primary);"></i> Clinic Timings (Updated)</h4>
+                    <p><strong>Monday – Saturday:</strong> 10:00 AM – 2:00 PM | 5:00 PM – 9:00 PM<br><strong>Sunday:</strong> Only for Appointments</p>
+                    <div class="callout-doc-links" style="margin-top: 16px;">
                         <a href="tel:8073382302" class="btn-secondary" style="padding: 8px 18px; font-size: 0.88rem;"><i class="fa-solid fa-phone"></i> Dr. Ajay Kennedy (8073382302)</a>
+                        <a href="tel:9535508672" class="btn-secondary" style="padding: 8px 18px; font-size: 0.88rem;"><i class="fa-solid fa-phone"></i> Dr. Aravind S (9535508672)</a>
                     </div>
                 </div>
 
@@ -848,10 +828,10 @@
                         </div>
 
                         <div class="info-item">
-                            <i class="fa-solid fa-clock"></i>
+                            <i class="fa-solid fa-phone"></i>
                             <div>
-                                <h4>Clinic Timings</h4>
-                                <p><strong>Monday – Saturday:</strong> 10:00 AM – 9:00 PM<br><strong>Sunday:</strong> By Appointment</p>
+                                <h4>Doctors Phone / WhatsApp</h4>
+                                <p><strong>Dr. Ajay Kennedy:</strong> +91 8073382302<br><strong>Dr. Aravind S:</strong> +91 9535508672</p>
                             </div>
                         </div>
 
